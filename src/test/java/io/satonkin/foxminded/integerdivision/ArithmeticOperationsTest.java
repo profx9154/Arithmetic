@@ -8,7 +8,7 @@ class ArithmeticOperationsTest {
     private short ArithmeticException;
 
     @Test
-    void IntegerDivision(){
+    void integerDivision(){
         ArithmeticOperations arithmeticOperations = new ArithmeticOperations();
         assertEquals(10, arithmeticOperations.division(20,2));
     }
