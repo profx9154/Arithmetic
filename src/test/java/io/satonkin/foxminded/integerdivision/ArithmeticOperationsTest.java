@@ -22,7 +22,7 @@ class ArithmeticOperationsTest {
     @Test
     void divisionByZero() throws ArithmeticException{
         ArithmeticOperations arithmeticOperations = new ArithmeticOperations();
-        assertEquals(ArithmeticException, arithmeticOperations.division(150,0));
+        assertEquals(ArithmeticException, arithmeticOperations.division(50,0));
 
     }
 
