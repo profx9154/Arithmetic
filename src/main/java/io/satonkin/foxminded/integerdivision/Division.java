@@ -56,12 +56,12 @@ public class Division implements Operation {
       if (minuend >= divisor) {
         remainderOfTheDivision = minuend % divisor;
         subtrahend = minuend / divisor * divisor;
-        String lastMinuend = String.format("%" + (i + 2) + "s", "_" + minuend.toString());//?
+        String lastMinuend = String.format("%" + (i + 2) + "s", "_" + minuend.toString());
         result.append(lastMinuend).append("\n");
-        String lastSubtrahend = String.format("%" + (i + 2) + "d", subtrahend);//?
+        String lastSubtrahend = String.format("%" + (i + 2) + "d", subtrahend);
         result.append(lastSubtrahend).append("\n");
         Integer lengthDifference = lastMinuend.length() - calculateLenghtDigit(subtrahend);
-        result.append(addSpaseAndDashBetweenSubtraction(minuend, lengthDifference)).append("\n");//
+        result.append(addSpaseAndDashBetweenSubtraction(minuend, lengthDifference)).append("\n");
         quotient.append(minuend / divisor);
         calculations.replace(0, calculations.length(), remainderOfTheDivision.toString());
         minuend = Integer.parseInt(calculations.toString());
