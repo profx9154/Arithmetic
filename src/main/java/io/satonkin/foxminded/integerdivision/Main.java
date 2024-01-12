@@ -1,11 +1,11 @@
 package io.satonkin.foxminded.integerdivision;
 
 public class Main {
-    public static void main(String[] args) {
-        ArithmeticOperations arithmeticOperations = new ArithmeticOperations();
+  public static void main(String[] args) {
+    Division division = new Division();
+    DivisionPrinter divisionPrinter = new DivisionPrinter();
+    divisionPrinter.printCalculations(division.startDivision(999, 52));
 
-        System.out.println(arithmeticOperations.division(5, 1));
-    }
 
-
+  }
 }
