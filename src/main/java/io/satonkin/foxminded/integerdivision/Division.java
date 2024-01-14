@@ -4,6 +4,7 @@ public class Division implements Operation {
   private StringBuilder result = new StringBuilder();
   private StringBuilder quotient = new StringBuilder();
   private StringBuilder calculations = new StringBuilder();
+
   private String addSpaseAndDashBetweenSubtraction(Integer amountDashes, Integer amountSpaces) {
     return addSomeCharInString(amountSpaces, ' ') + addSomeCharInString(calculateLenghtDigit(amountDashes), '-');
   }
