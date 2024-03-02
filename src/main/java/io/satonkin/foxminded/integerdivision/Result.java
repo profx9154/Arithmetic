@@ -17,4 +17,28 @@ public class Result {
     this.minuend = minuend;
     this.subtrahend = subtrahend;
   }
+
+  public int getDividend() {
+    return dividend;
+  }
+
+  public int getDivisor() {
+    return divisor;
+  }
+
+  public int getQuotient() {
+    return quotient;
+  }
+
+  public int getDifference() {
+    return difference;
+  }
+
+  public ArrayList<Integer> getMinuend() {
+    return minuend;
+  }
+
+  public ArrayList<Integer> getSubtrahend() {
+    return subtrahend;
+  }
 }
