@@ -4,19 +4,14 @@ import java.util.ArrayList;
 
 public class Calculator {
   public Result divide(int dividend, int divisor) throws Exception {
-    checkDivideByZero(dividend,divisor);
-    checkNegativeNumber(dividend,divisor);
-    if (divisor>dividend){
-      checkDivisorMoreDividend(dividend,divisor);
-    }
-
+    checkByException(dividend, divisor);
     ArrayList<Integer> listMinuend = new ArrayList<Integer>();
     ArrayList<Integer> listSubtrahend = new ArrayList<Integer>();
     ArrayList<Integer> listReminder = new ArrayList<Integer>();
     int subtrahend;
     int minuend;
     int difference = 0;
-    int quotient=dividend/divisor;
+    int quotient = dividend / divisor;
     Integer intReminder;
     String stringReminder = "";
     ArrayList<Integer> listDividend = convertingCumberToArray(dividend);
@@ -34,7 +29,21 @@ public class Calculator {
         stringReminder = intReminder.toString();
       }
     }
-    Result result=new Result(dividend,divisor,quotient,difference,listMinuend,listSubtrahend);
+    Result result = new Result(dividend, divisor, quotient, difference, listMinuend, listSubtrahend);
+    System.out.println(dividend);
+    System.out.println("dividend");
+
+    System.out.println(divisor);
+    System.out.println("divisor");
+    System.out.println(quotient);
+    System.out.println("quotient");
+    System.out.println(listMinuend);
+    System.out.println("listMinuend");
+    System.out.println(listSubtrahend);
+    System.out.println("listSubtrahend");
+    System.out.println(difference);
+
+    System.out.println("difference");
     return result;
   }
 
@@ -48,30 +57,21 @@ public class Calculator {
 
   }
 
-  public void checkDivideByZero(int dividend, int divisor){
-    int quotient=0;
-    try {
-      quotient = dividend / divisor;
-    } catch (ArithmeticException DivideByZero) {
-      System.out.println("YOU CAN'T DIVIDE BY ZERO.");
+  public void checkByException(int dividend, int divisor) {
+    if (divisor == 0) {
+      throw new IllegalArgumentException("Divisor can't be zero");
+    } if (dividend < 0 || divisor < 0) {
+      throw new IllegalArgumentException("Dividend and divisor must be positive");
+    } if (divisor > dividend) {
+      float quotient = 0;
+      quotient = (float) dividend / divisor;
+      System.out.println("возможно этот метод должен отправлять на деление и выводить другое решение" + quotient);
     }
-  }
-  public  void checkDivisorMoreDividend(int dividend, int divisor){
-    float quotient=0;
-    if (divisor>dividend){
-       quotient = (float) dividend / divisor;
-      System.out.println(""+quotient);
-    }
+
   }
 
 
-  public void checkNegativeNumber(int dividend, int divisor) throws Exception {
-    if (dividend<0||divisor<0){
-      System.out.println("NEGATIVE NUMBER PLEASE TRY AGAIN");
-      throw new Exception();
-    }
-  }
-  }
+}
 
 
 
