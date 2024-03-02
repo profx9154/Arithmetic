@@ -3,18 +3,20 @@ package io.satonkin.foxminded.integerdivision;
 import java.util.ArrayList;
 
 public class Calculator {
-  public Result devide(int dividend, int divisor) throws Exception {
-    checkNegativeNumber( dividend,  divisor);
-    int quotient= getQuotient( dividend,divisor);
+  public Result divide(int dividend, int divisor) throws Exception {
+    checkDivideByZero(dividend,divisor);
+    checkNegativeNumber(dividend,divisor);
     if (divisor>dividend){
       checkDivisorMoreDividend(dividend,divisor);
     }
+
     ArrayList<Integer> listMinuend = new ArrayList<Integer>();
     ArrayList<Integer> listSubtrahend = new ArrayList<Integer>();
     ArrayList<Integer> listReminder = new ArrayList<Integer>();
     int subtrahend;
     int minuend;
     int difference = 0;
+    int quotient=dividend/divisor;
     Integer intReminder;
     String stringReminder = "";
     ArrayList<Integer> listDividend = convertingCumberToArray(dividend);
@@ -46,15 +48,13 @@ public class Calculator {
 
   }
 
-
-  public int getQuotient(int dividend, int divisor){
+  public void checkDivideByZero(int dividend, int divisor){
     int quotient=0;
     try {
       quotient = dividend / divisor;
     } catch (ArithmeticException DivideByZero) {
       System.out.println("YOU CAN'T DIVIDE BY ZERO.");
     }
-    return quotient;
   }
   public  void checkDivisorMoreDividend(int dividend, int divisor){
     float quotient=0;
