@@ -65,7 +65,7 @@ public class Calculator {
     } if (divisor > dividend) {
       float quotient = 0;
       quotient = (float) dividend / divisor;
-      System.out.println("возможно этот метод должен отправлять на деление и выводить другое решение" + quotient);
+      System.out.println("Divisor more dividend quotient will be  " + quotient);
     }
 
   }
