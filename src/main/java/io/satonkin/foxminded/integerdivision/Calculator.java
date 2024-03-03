@@ -30,20 +30,6 @@ public class Calculator {
       }
     }
     Result result = new Result(dividend, divisor, quotient, difference, listMinuend, listSubtrahend);
-    System.out.println(dividend);
-    System.out.println("dividend");
-
-    System.out.println(divisor);
-    System.out.println("divisor");
-    System.out.println(quotient);
-    System.out.println("quotient");
-    System.out.println(listMinuend);
-    System.out.println("listMinuend");
-    System.out.println(listSubtrahend);
-    System.out.println("listSubtrahend");
-    System.out.println(difference);
-
-    System.out.println("difference");
     return result;
   }
 
