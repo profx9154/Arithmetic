@@ -10,12 +10,6 @@ public class SpanishFormat implements Formatter {
 
     return "";
   }
-  public StringBuilder createSecondLine(Result result){
-    StringBuilder secondLine=new StringBuilder();
-    secondLine.append(addDashToNumber(result.getMinuend().get(1)));
-
-    return secondLine;
-  }
 
   public StringBuilder createFirstLine(Result result){
     StringBuilder firstLine=new StringBuilder();
@@ -34,6 +28,20 @@ public class SpanishFormat implements Formatter {
     firstLine.append(result.getQuotient());
     firstLine.append("\n");
     return firstLine;
+  }
+
+  public StringBuilder createSecondLine(Result result){
+    StringBuilder secondLine=new StringBuilder();
+    secondLine.append(addDashToNumber(result.getMinuend().get(1)));
+
+    return secondLine;
+  }
+
+  public StringBuilder createThirdLine(Result result){
+    StringBuilder secondLine=new StringBuilder();
+    secondLine.append(addDashToNumber(result.getMinuend().get(1)));
+
+    return secondLine;
   }
 
   public String addDashToNumber(int number){
