@@ -11,7 +11,6 @@ public class Calculator {
     int subtrahend;
     int minuend;
     int difference = 0;
-    int quotient = dividend / divisor;
     Integer intReminder;
     String stringReminder = "";
     ArrayList<Integer> listDividend = convertingCumberToArray(dividend);
@@ -29,7 +28,7 @@ public class Calculator {
         stringReminder = intReminder.toString();
       }
     }
-    Result result = new Result(dividend, divisor, quotient, difference, listMinuend, listSubtrahend);
+    Result result = new Result(dividend, divisor, difference, listMinuend, listSubtrahend);
     return result;
   }
 
