@@ -14,12 +14,11 @@ public class SpanishFormat implements Formatter {
 
   public StringBuilder createFirstСolumn(Result result) {
     StringBuilder firstColumn = new StringBuilder();
-    String firstLine = addDashToMinuend(result.getDividend()) + "|" + result.getDivisor() + LINE_SEPARATOR;
-    String secondLine = " " + result.getSubtrahend().get(0) + addCharInString(calculateLenghtDigit(result.getDividend()) - 1, ' ') +
-      "|" + addCharInString(calculateLenghtDigit(result.getQuotient()), '_') + LINE_SEPARATOR;
-    String thirdLine = " " + addCharInString(1, '_') +
-      addCharInString(calculateLenghtDigit(result.getDividend()) - 1, ' ') + "|" + result.getQuotient() + LINE_SEPARATOR;
-    firstColumn.append(firstLine + secondLine + thirdLine);
+    firstColumn.append(addDashToMinuend(result.getDividend()) + "|" + result.getDivisor() + LINE_SEPARATOR);
+    firstColumn.append(" " + result.getSubtrahend().get(0) + addCharInString(calculateLenghtDigit(result.getDividend()) - 1, ' ') +
+      "|" + addCharInString(calculateLenghtDigit(result.getQuotient()), '_') + LINE_SEPARATOR);
+    firstColumn.append(" " + addCharInString(1, '_') +
+      addCharInString(calculateLenghtDigit(result.getDividend()) - 1, ' ') + "|" + result.getQuotient() + LINE_SEPARATOR);
     return firstColumn;
   }
 
@@ -28,15 +27,9 @@ public class SpanishFormat implements Formatter {
     for (int i=1,j=1;i<result.getMinuend().size();i++,j++){
       int reminderMinuend=result.getMinuend().get(i);
       int reminderSubtrahend=result.getSubtrahend().get(j);
-      secondLine.append(addCharInString(i-1,' '));
-      secondLine.append(addDashToMinuend(reminderMinuend));
-      secondLine.append(LINE_SEPARATOR);
-      secondLine.append(addCharInString(i,' '));
-      secondLine.append(reminderSubtrahend);
-      secondLine.append(LINE_SEPARATOR);
-      secondLine.append(addCharInString(i,' '));
-      secondLine.append(addCharInString(calculateLenghtDigit(reminderSubtrahend),'-'));
-      secondLine.append(LINE_SEPARATOR);
+      secondLine.append(addCharInString(i-1,' ')+addDashToMinuend(reminderMinuend)+LINE_SEPARATOR);
+      secondLine.append(addCharInString(i,' ')+reminderSubtrahend+LINE_SEPARATOR);
+      secondLine.append(addCharInString(i,' ')+addCharInString(calculateLenghtDigit(reminderSubtrahend),'-')+LINE_SEPARATOR);
       if (i>=reminderMinuend){
         createThirdColumn(result);
       }
