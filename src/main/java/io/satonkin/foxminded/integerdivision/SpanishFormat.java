@@ -7,9 +7,9 @@ public class SpanishFormat implements Formatter {
   public String format(Result result) {
     StringBuilder output = new StringBuilder();
     output.append(createFirstСolumn(result));
-    output.append(createSecondLine(result));
-    System.out.println(output);
-    return "";
+    output.append(createSecondColumn(result));
+    output.append(createThirdColumn(result));
+    return output.toString();
   }
 
   public StringBuilder createFirstСolumn(Result result) {
@@ -23,18 +23,32 @@ public class SpanishFormat implements Formatter {
     return firstColumn;
   }
 
-  public StringBuilder createSecondLine(Result result) {
+  public StringBuilder createSecondColumn(Result result) {
     StringBuilder secondLine = new StringBuilder();
-
-
+    for (int i=1,j=1;i<result.getMinuend().size();i++,j++){
+      int reminderMinuend=result.getMinuend().get(i);
+      int reminderSubtrahend=result.getSubtrahend().get(j);
+      secondLine.append(addCharInString(i-1,' '));
+      secondLine.append(addDashToMinuend(reminderMinuend));
+      secondLine.append(LINE_SEPARATOR);
+      secondLine.append(addCharInString(i,' '));
+      secondLine.append(reminderSubtrahend);
+      secondLine.append(LINE_SEPARATOR);
+      secondLine.append(addCharInString(i,' '));
+      secondLine.append(addCharInString(calculateLenghtDigit(reminderSubtrahend),'-'));
+      secondLine.append(LINE_SEPARATOR);
+      if (i>=reminderMinuend){
+        createThirdColumn(result);
+      }
+    }
     return secondLine;
   }
 
-  public StringBuilder createThirdLine(Result result) {
-    StringBuilder secondLine = new StringBuilder();
-    secondLine.append(addDashToMinuend(result.getMinuend().get(1)));
-
-    return secondLine;
+  public StringBuilder createThirdColumn(Result result) {
+    StringBuilder thirdLine = new StringBuilder();
+    thirdLine.append(addCharInString(calculateLenghtDigit(result.getDividend())+1,' '));
+    thirdLine.append(result.getDifference());
+    return thirdLine;
   }
 
   public String addDashToMinuend(int number) {
