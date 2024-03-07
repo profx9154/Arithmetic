@@ -44,7 +44,7 @@ public class Calculator {
 
   public void checkByException(int dividend, int divisor) {
     if (divisor == 0) {
-      throw new ArithmeticException("Divisor can't be zero");
+      throw new  IllegalArgumentException("Divisor can't be zero");
     } if (dividend < 0 || divisor < 0) {
       throw new ArithmeticException("Dividend and divisor must be positive");
     } if (divisor > dividend) {
