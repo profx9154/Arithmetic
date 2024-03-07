@@ -2,6 +2,9 @@ package io.satonkin.foxminded.integerdivision;
 
 public class GermanFormat implements Formatter{
   private static final String LINE_SEPARATOR = "\n";
+
+  public GermanFormat() {}
+
   @Override
   public String format(Result result) {
     StringBuilder output = new StringBuilder();

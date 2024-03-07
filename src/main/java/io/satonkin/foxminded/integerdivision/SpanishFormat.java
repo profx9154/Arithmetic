@@ -3,6 +3,8 @@ package io.satonkin.foxminded.integerdivision;
 public class SpanishFormat implements Formatter {
   private static final String LINE_SEPARATOR = "\n";
 
+  public SpanishFormat() {}
+
   @Override
   public String format(Result result) {
     StringBuilder output = new StringBuilder();
