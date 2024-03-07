@@ -3,7 +3,7 @@ package io.satonkin.foxminded.integerdivision;
 import java.util.ArrayList;
 
 public class Calculator {
-  public Result divide(int dividend, int divisor) throws Exception {
+  public Result divide(int dividend, int divisor) {
     checkByException(dividend, divisor);
     ArrayList<Integer> listMinuend = new ArrayList<Integer>();
     ArrayList<Integer> listSubtrahend = new ArrayList<Integer>();
@@ -26,7 +26,6 @@ public class Calculator {
         stringReminder = intReminder.toString();
       }
     }
-
     Result result = new Result(dividend, divisor, reminder, listMinuend, listSubtrahend);
     return result;
   }
@@ -43,17 +42,16 @@ public class Calculator {
 
   public void checkByException(int dividend, int divisor) {
     if (divisor == 0) {
-      throw new  IllegalArgumentException("Divisor can't be zero");
+      throw new IllegalArgumentException("Divisor can't be zero");
     } if (dividend < 0 || divisor < 0) {
       throw new ArithmeticException("Dividend and divisor must be positive");
     } if (divisor > dividend) {
       float quotient = 0;
       quotient = (float) dividend / divisor;
-      throw new ArithmeticException("Divisor more Dividend answer " +quotient);
+      throw new ArithmeticException("Divisor more Dividend answer " + quotient);
     }
 
   }
-
 
 }
 
