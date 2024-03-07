@@ -44,13 +44,13 @@ public class Calculator {
 
   public void checkByException(int dividend, int divisor) {
     if (divisor == 0) {
-      throw new IllegalArgumentException("Divisor can't be zero");
+      throw new ArithmeticException("Divisor can't be zero");
     } if (dividend < 0 || divisor < 0) {
-      throw new IllegalArgumentException("Dividend and divisor must be positive");
+      throw new ArithmeticException("Dividend and divisor must be positive");
     } if (divisor > dividend) {
       float quotient = 0;
       quotient = (float) dividend / divisor;
-      System.out.println("Divisor more dividend quotient will be  " + quotient);
+      throw new ArithmeticException("Divisor more Dividend answer " +quotient);
     }
 
   }

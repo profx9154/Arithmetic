@@ -6,9 +6,10 @@ public class Main {
     Result result = calculator.divide(78945,4);
     Formatter spanishFormatter =new  SpanishFormat() ;
     Formatter germanFormatter=new GermanFormat();
-    String ouput=spanishFormatter.format(result);
-    String ouput2=germanFormatter.format(result);
-    // System.out.println(ouput);
-    System.out.println(ouput2);
+    String ouputSpanishFormat=spanishFormatter.format(result);
+    String ouputGermanFormat=germanFormatter.format(result);
+    System.out.println(ouputSpanishFormat);
+    System.out.println(" ");
+    System.out.println(ouputGermanFormat);
   }
 }
