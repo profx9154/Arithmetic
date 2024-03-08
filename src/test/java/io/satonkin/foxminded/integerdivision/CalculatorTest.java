@@ -75,7 +75,7 @@ class CalculatorTest {
   void testCheckByExceptionByZero() {
     Exception exception = Assertions.assertThrows(IllegalArgumentException.class,
       () -> {
-        calculator.divide(78945,0);
+        calculator.divide(78945, 0);
       });
 
     String expectedMessage = "Divisor can't be zero";
@@ -88,7 +88,7 @@ class CalculatorTest {
   void testCheckByExceptionNumberShouldBePositive() {
     Exception exception = Assertions.assertThrows(ArithmeticException.class,
       () -> {
-        calculator.divide(-78945,5);
+        calculator.divide(-78945, 5);
       });
 
     String expectedMessage = "Dividend and divisor must be positive";
@@ -101,9 +101,9 @@ class CalculatorTest {
   void testCheckByExceptionDivisorMoreDividend() {
     Exception exception = Assertions.assertThrows(ArithmeticException.class,
       () -> {
-        calculator.divide(1,100);
+        calculator.divide(1, 100);
       });
-    String expectedMessage = "Divisor more Dividend answer 0.01" ;
+    String expectedMessage = "Divisor more Dividend answer 0.01";
     String actualMessage = exception.getMessage();
 
     Assertions.assertEquals(actualMessage, expectedMessage);
