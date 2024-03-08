@@ -42,7 +42,7 @@ public class SpanishFormat implements Formatter {
   public StringBuilder createThirdColumn(Result result) {
     StringBuilder thirdLine = new StringBuilder();
     thirdLine.append(addCharInString(calculateLenghtDigit(result.getDividend())+1,' '));
-    thirdLine.append(result.getDifference());
+    thirdLine.append(result.getReminder());
     return thirdLine;
   }
 

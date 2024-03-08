@@ -36,7 +36,7 @@ public class GermanFormat implements Formatter{
   public StringBuilder createThirdColumn(Result result) {
     StringBuilder thirdColumn = new StringBuilder();
     thirdColumn.append(addCharInString(calculateLenghtDigit(result.getDividend())-1,' '));
-    thirdColumn.append(result.getDifference());
+    thirdColumn.append(result.getReminder());
     return thirdColumn;
   }
 

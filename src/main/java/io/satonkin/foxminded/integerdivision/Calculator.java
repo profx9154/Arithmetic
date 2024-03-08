@@ -12,7 +12,7 @@ public class Calculator {
     int reminder = 0;
     Integer intReminder;
     String stringReminder = "";
-    ArrayList<Integer> listDividend = convertingCumberToArray(dividend);
+    ArrayList<Integer> listDividend = breakDownIntoIndividualNumbers(dividend);
     for (int i = 0; i < listDividend.size(); i++) {
       stringReminder = stringReminder + listDividend.get(i).toString();
       intReminder = Integer.parseInt(stringReminder);
@@ -30,7 +30,7 @@ public class Calculator {
     return result;
   }
 
-  public ArrayList convertingCumberToArray(int dividend) {
+  public ArrayList breakDownIntoIndividualNumbers(int dividend) {
     ArrayList<Integer> listDividend = new ArrayList();
     String[] stringDivident = String.valueOf(dividend).split("");
     for (int i = 0; i < stringDivident.length; i++) {

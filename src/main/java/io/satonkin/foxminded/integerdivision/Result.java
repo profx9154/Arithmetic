@@ -8,11 +8,11 @@ public class Result {
   private final int reminder;
   private final ArrayList<Integer> minuend;
   private final ArrayList<Integer> subtrahend;
-  public Result(int dividend, int divisor,  int difference, ArrayList<Integer> minuend, ArrayList<Integer> subtrahend) {
+  public Result(int dividend, int divisor,  int reminder, ArrayList<Integer> minuend, ArrayList<Integer> subtrahend) {
     this.dividend = dividend;
     this.divisor = divisor;
     this.quotient =dividend / divisor;
-    this.reminder = difference;
+    this.reminder = reminder;
     this.minuend = minuend;
     this.subtrahend = subtrahend;
   }
@@ -29,7 +29,7 @@ public class Result {
     return quotient;
   }
 
-  public int getDifference() {
+  public int getReminder() {
     return reminder;
   }
 
