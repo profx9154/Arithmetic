@@ -7,6 +7,7 @@ public class GermanFormat implements Formatter{
 
   @Override
   public String format(Result result) {
+    checkByNull(result);
     StringBuilder output = new StringBuilder();
     output.append(createFirstСolumn(result));
     output.append(createSecondColumn(result));
@@ -50,6 +51,12 @@ public class GermanFormat implements Formatter{
 
   private int calculateLenghtDigit(int i) {
     return (int) Math.log10(i) + 1;
+  }
+
+  private void checkByNull(Result result) {
+    if (result == null) {
+      throw new IllegalArgumentException("You cannot pass null to this function");
+    }
   }
 
 }
