@@ -1,4 +1,4 @@
-package io.satonkin.foxminded.integerdivision;
+package io.satonkin.foxminded.integerdivision.model;
 
 import java.util.ArrayList;
 

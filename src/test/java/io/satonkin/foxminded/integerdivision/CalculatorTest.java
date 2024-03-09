@@ -1,5 +1,7 @@
 package io.satonkin.foxminded.integerdivision;
 
+import io.satonkin.foxminded.integerdivision.calculator.Calculator;
+import io.satonkin.foxminded.integerdivision.model.Result;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

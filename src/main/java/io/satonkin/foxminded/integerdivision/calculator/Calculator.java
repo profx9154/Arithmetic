@@ -1,4 +1,6 @@
-package io.satonkin.foxminded.integerdivision;
+package io.satonkin.foxminded.integerdivision.calculator;
+
+import io.satonkin.foxminded.integerdivision.model.Result;
 
 import java.util.ArrayList;
 

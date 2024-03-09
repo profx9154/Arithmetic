@@ -1,4 +1,4 @@
-package io.satonkin.foxminded.integerdivision;
+package io.satonkin.foxminded.integerdivision.formater;
 
 public class FormatterFactory {
   public static Formatter creatrFormatter(String string) {

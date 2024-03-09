@@ -1,9 +1,13 @@
 package io.satonkin.foxminded.integerdivision;
 
+import io.satonkin.foxminded.integerdivision.calculator.Calculator;
+import io.satonkin.foxminded.integerdivision.formater.Formatter;
+import io.satonkin.foxminded.integerdivision.formater.FormatterFactory;
+import io.satonkin.foxminded.integerdivision.formater.GermanFormat;
+import io.satonkin.foxminded.integerdivision.formater.SpanishFormat;
+import io.satonkin.foxminded.integerdivision.model.Result;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FormatterTest {
   @Test

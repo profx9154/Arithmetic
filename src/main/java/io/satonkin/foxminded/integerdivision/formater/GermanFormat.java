@@ -1,4 +1,6 @@
-package io.satonkin.foxminded.integerdivision;
+package io.satonkin.foxminded.integerdivision.formater;
+
+import io.satonkin.foxminded.integerdivision.model.Result;
 
 public class GermanFormat implements Formatter {
   private static final String LINE_SEPARATOR = "\n";
