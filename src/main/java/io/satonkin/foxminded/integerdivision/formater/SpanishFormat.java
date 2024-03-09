@@ -20,7 +20,7 @@ public class SpanishFormat implements Formatter {
   public StringBuilder createFirstСolumn(Result result) {
     StringBuilder firstColumn = new StringBuilder();
     firstColumn.append(addDashToMinuend(result.getDividend()) + "|" + result.getDivisor() + LINE_SEPARATOR);
-    firstColumn.append(" " + result.getSubtrahend().get(0) + addCharInString(calculateLengthDigit(result.getDividend()) - 1, ' ') +
+    firstColumn.append(" " + result.getSubtrahend().get(0) + addCharInString(calculateLengthDigit(result.getDividend()) - calculateLengthDigit(result.getSubtrahend().get(0)), ' ') +
       "|" + addCharInString(calculateLengthDigit(result.getQuotient()), '_') + LINE_SEPARATOR);
     firstColumn.append(" " + addCharInString(1, '_') +
       addCharInString(calculateLengthDigit(result.getDividend()) - 1, ' ') + "|" + result.getQuotient() + LINE_SEPARATOR);
