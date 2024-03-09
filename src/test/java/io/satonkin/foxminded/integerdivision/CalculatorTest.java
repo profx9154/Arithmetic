@@ -12,47 +12,96 @@ class CalculatorTest {
 
   @Test
   void testDivideExpectationQuotient() {
-    Result result = calculator.divide(78945, 4);
-    int expectationQuotient = result.getQuotient();
-    Assertions.assertEquals(19736, expectationQuotient);
+    int dividend=78945;
+    int divisor=4;
+    int reminder=1;
+    ArrayList<Integer> minuend = new ArrayList<>();
+    minuend.add(7);
+    minuend.add(38);
+    minuend.add(29);
+    minuend.add(14);
+    minuend.add(25);
+    ArrayList<Integer> subtrahend = new ArrayList<>();
+    subtrahend.add(4);
+    subtrahend.add(36);
+    subtrahend.add(28);
+    subtrahend.add(12);
+    subtrahend.add(24);
+    Result expected = new Result(dividend,divisor,reminder,minuend,subtrahend);
+    Result actual = calculator.divide(78945, 4);
+    int actualQuotient = actual.getQuotient();
+    Assertions.assertEquals(expected.getQuotient(), actualQuotient);
 
   }
 
 
   @Test
   void testDivideExpectationReminder() {
-    Result result = calculator.divide(78945, 4);
-    int expectationReminder = result.getReminder();
-    Assertions.assertEquals(1, expectationReminder);
+    int dividend=78945;
+    int divisor=4;
+    int reminder=1;
+    ArrayList<Integer> minuend = new ArrayList<>();
+    minuend.add(7);
+    minuend.add(38);
+    minuend.add(29);
+    minuend.add(14);
+    minuend.add(25);
+    ArrayList<Integer> subtrahend = new ArrayList<>();
+    subtrahend.add(4);
+    subtrahend.add(36);
+    subtrahend.add(28);
+    subtrahend.add(12);
+    subtrahend.add(24);
+    Result expected = new Result(dividend,divisor,reminder,minuend,subtrahend);
+    Result actual = calculator.divide(78945, 4);
+    Assertions.assertEquals(expected.getReminder(), actual.getReminder());
 
   }
 
 
   @Test
   void testDivideExpectationListSubtrahend() {
-    Result result = calculator.divide(78945, 4);
-    ArrayList<Integer> expectationListSubtrahend = result.getSubtrahend();
-    ArrayList<Integer> realListSubtrahend = new ArrayList<Integer>();
-    realListSubtrahend.add(4);
-    realListSubtrahend.add(36);
-    realListSubtrahend.add(28);
-    realListSubtrahend.add(12);
-    realListSubtrahend.add(24);
-    Assertions.assertEquals(expectationListSubtrahend, realListSubtrahend);
+    int dividend=78945;
+    int divisor=4;
+    int reminder=1;
+    ArrayList<Integer> minuend = new ArrayList<>();
+    minuend.add(7);
+    minuend.add(38);
+    minuend.add(29);
+    minuend.add(14);
+    minuend.add(25);
+    ArrayList<Integer> subtrahend = new ArrayList<>();
+    subtrahend.add(4);
+    subtrahend.add(36);
+    subtrahend.add(28);
+    subtrahend.add(12);
+    subtrahend.add(24);
+    Result expected = new Result(dividend,divisor,reminder,minuend,subtrahend);
+    Result actual = calculator.divide(78945, 4);
+    Assertions.assertEquals(expected.getSubtrahend(), actual.getSubtrahend());
   }
 
 
   @Test
   void testDivideExpectationListMinuend() {
-    Result result = calculator.divide(78945, 4);
-    ArrayList<Integer> expectationListMinuend = result.getMinuend();
-    ArrayList<Integer> realListMinuend = new ArrayList<Integer>();
-    realListMinuend.add(7);
-    realListMinuend.add(38);
-    realListMinuend.add(29);
-    realListMinuend.add(14);
-    realListMinuend.add(25);
-    Assertions.assertEquals(expectationListMinuend, realListMinuend);
+    int dividend=78945;
+    int divisor=4;
+    int reminder=1;
+    ArrayList<Integer> minuend = new ArrayList<>();
+    minuend.add(7);
+    minuend.add(38);
+    minuend.add(29);
+    minuend.add(14);
+    minuend.add(25);
+    ArrayList<Integer> subtrahend = new ArrayList<>();
+    subtrahend.add(4);
+    subtrahend.add(36);
+    subtrahend.add(28);
+    subtrahend.add(12);
+    subtrahend.add(24);
+    Result expected = new Result(dividend,divisor,reminder,minuend,subtrahend);
+    Result actual = calculator.divide(78945, 4);;
+    Assertions.assertEquals(expected.getMinuend(), actual.getMinuend());
   }
 
   @Test
