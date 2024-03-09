@@ -1,16 +1,17 @@
 package io.satonkin.foxminded.integerdivision.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Result {
   private final int dividend;
   private final int divisor;
   private final int quotient;
   private final int reminder;
-  private final ArrayList<Integer> minuend;
-  private final ArrayList<Integer> subtrahend;
+  private final List<Integer> minuend;
+  private final List<Integer> subtrahend;
 
-  public Result(int dividend, int divisor, int reminder, ArrayList<Integer> minuend, ArrayList<Integer> subtrahend) {
+  public Result(int dividend, int divisor, int reminder, List<Integer> minuend, List<Integer> subtrahend) {
     this.dividend = dividend;
     this.divisor = divisor;
     this.quotient = dividend / divisor;
@@ -35,11 +36,11 @@ public class Result {
     return reminder;
   }
 
-  public ArrayList<Integer> getMinuend() {
+  public List<Integer> getMinuend() {
     return minuend;
   }
 
-  public ArrayList<Integer> getSubtrahend() {
+  public List<Integer> getSubtrahend() {
     return subtrahend;
   }
 }
