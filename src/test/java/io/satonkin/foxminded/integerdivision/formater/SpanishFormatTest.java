@@ -85,7 +85,7 @@ class SpanishFormatTest {
       " 10\n" +
       " --\n" +
       "    0";
-    Result input = new Result(500, 2, 0, List.of(5,10), List.of(4,10));
+    Result input = new Result(500, 2, 0, List.of(5, 10), List.of(4, 10));
     String expected = formatter.format(input);
     Assertions.assertEquals(expected, actual);
 

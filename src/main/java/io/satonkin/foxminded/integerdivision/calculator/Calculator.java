@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Calculator {
   public Result divide(int dividend, int divisor) {
     checkByException(dividend, divisor);
-    ArrayList<Integer> listMinuend = new ArrayList<Integer>();
-    ArrayList<Integer> listSubtrahend = new ArrayList<Integer>();
+    ArrayList<Integer> listMinuend = new ArrayList<>();
+    ArrayList<Integer> listSubtrahend = new ArrayList<>();
     int subtrahend;
     int minuend;
     int reminder = 0;
