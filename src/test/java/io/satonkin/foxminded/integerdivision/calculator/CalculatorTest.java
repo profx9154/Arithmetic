@@ -159,4 +159,17 @@ class CalculatorTest {
 
     Assertions.assertEquals(actualMessage, expectedMessage);
   }
+
+
+  @Test
+  void testCheckByExceptionDivisorSameDividend() {
+    Exception exception = Assertions.assertThrows(ArithmeticException.class,
+      () -> {
+        calculator.divide(100, 100);
+      });
+    String actual = "Divisor same Dividend answer " + 1;
+    String expected  = exception.getMessage();
+
+    Assertions.assertEquals(expected , actual);
+  }
 }

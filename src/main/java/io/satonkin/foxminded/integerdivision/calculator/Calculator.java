@@ -52,6 +52,10 @@ public class Calculator {
       quotient = (float) dividend / divisor;
       throw new ArithmeticException("Divisor more Dividend answer " + quotient);
     }
+    if (divisor == dividend) {
+      int quotient = dividend/divisor;
+      throw new ArithmeticException("Divisor same Dividend answer " + quotient);
+    }
 
   }
 
