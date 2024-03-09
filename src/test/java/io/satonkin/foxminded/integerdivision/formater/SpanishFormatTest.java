@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SpanishFormatTest {
-
+  Formatter formatter = new SpanishFormat();
   @Test
   void testSpanishFormatExample1() {
     String expected = "_78945|4\n" +
@@ -45,8 +45,7 @@ class SpanishFormatTest {
     subtrahend.add(12);
     subtrahend.add(24);
     Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
-    Formatter spanishFormatterExample1 = FormatterFactory.creatrFormatter("Spanish");
-    String actual = spanishFormatterExample1.format(input);
+    String actual = formatter.format(input);
     Assertions.assertEquals(expected, actual);
 
 
@@ -76,8 +75,7 @@ class SpanishFormatTest {
     subtrahend.add(25);
     subtrahend.add(35);
     Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
-    Formatter spanishFormatterExample2 = FormatterFactory.creatrFormatter("Spanish");
-    String actual = spanishFormatterExample2.format(input);
+    String actual = formatter.format(input);
     Assertions.assertEquals(expected, actual);
 
 
@@ -107,8 +105,7 @@ class SpanishFormatTest {
     subtrahend.add(45);
     subtrahend.add(45);
     Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
-    Formatter spanishFormatterExample3 = FormatterFactory.creatrFormatter("Spanish");
-    String expected = spanishFormatterExample3.format(input);
+    String expected = formatter.format(input);
     Assertions.assertEquals(expected, actual);
 
 
@@ -133,8 +130,7 @@ class SpanishFormatTest {
     subtrahend.add(4);
     subtrahend.add(10);
     Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
-    Formatter spanishFormatterExample4 = FormatterFactory.creatrFormatter("Spanish");
-    String expected = spanishFormatterExample4.format(input);
+    String expected = formatter.format(input);
     Assertions.assertEquals(expected, actual);
 
 

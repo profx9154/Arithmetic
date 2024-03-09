@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GermanFormatTest {
+  Formatter formatter = new GermanFormat();
 
   @Test
   void testGermanFormatExample1() {
@@ -45,8 +46,7 @@ class GermanFormatTest {
     subtrahend.add(12);
     subtrahend.add(24);
     Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
-    Formatter spanishFormatterExample1 = FormatterFactory.creatrFormatter("German");
-    String expected = spanishFormatterExample1.format(input);
+    String expected = formatter.format(input);
     Assertions.assertEquals(expected, actual);
   }
 
@@ -74,8 +74,7 @@ class GermanFormatTest {
     subtrahend.add(25);
     subtrahend.add(35);
     Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
-    Formatter spanishFormatterExample2 = FormatterFactory.creatrFormatter("German");
-    String expected = spanishFormatterExample2.format(input);
+    String expected = formatter.format(input);
     Assertions.assertEquals(expected, actual);
   }
 
@@ -103,8 +102,7 @@ class GermanFormatTest {
     subtrahend.add(45);
     subtrahend.add(45);
     Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
-    Formatter spanishFormatterExample3 = FormatterFactory.creatrFormatter("German");
-    String expected = spanishFormatterExample3.format(input);
+    String expected = formatter.format(input);
     Assertions.assertEquals(expected, actual);
   }
 
@@ -128,8 +126,7 @@ class GermanFormatTest {
     subtrahend.add(4);
     subtrahend.add(10);
     Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
-    Formatter spanishFormatterExample4 = FormatterFactory.creatrFormatter("German");
-    String expected = spanishFormatterExample4.format(input);
+    String expected = formatter.format(input);
     Assertions.assertEquals(expected, actual);
   }
 
