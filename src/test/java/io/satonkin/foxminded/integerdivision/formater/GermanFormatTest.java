@@ -5,13 +5,15 @@ import io.satonkin.foxminded.integerdivision.model.Result;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class GermanFormatTest {
 
   @Test
   void testGermanFormatExample1() {
-    String actualGermanFormatExample1 = "78945 ÷4 => 19736\n" +
+    String actual = "78945 ÷4 => 19736\n" +
       "4\n" +
       "_\n" +
       "38\n" +
@@ -27,16 +29,30 @@ class GermanFormatTest {
       "   24\n" +
       "   __\n" +
       "    1";
-    Calculator calculator = new Calculator();
-    Result result = calculator.divide(78945, 4);
+    int dividend = 78945;
+    int divisor = 4;
+    int reminder = 1;
+    ArrayList<Integer> minuend = new ArrayList<>();
+    minuend.add(7);
+    minuend.add(38);
+    minuend.add(29);
+    minuend.add(14);
+    minuend.add(25);
+    ArrayList<Integer> subtrahend = new ArrayList<>();
+    subtrahend.add(4);
+    subtrahend.add(36);
+    subtrahend.add(28);
+    subtrahend.add(12);
+    subtrahend.add(24);
+    Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
     Formatter spanishFormatterExample1 = FormatterFactory.creatrFormatter("German");
-    String expectedSpanishFormatExample1 = spanishFormatterExample1.format(result);
-    Assertions.assertEquals(expectedSpanishFormatExample1, actualGermanFormatExample1);
+    String expected = spanishFormatterExample1.format(input);
+    Assertions.assertEquals(expected, actual);
   }
 
   @Test
   void testGermanFormatExample2() {
-    String actualGermanFormatExample2 = "789 ÷5 => 157\n" +
+    String actual = "789 ÷5 => 157\n" +
       "5\n" +
       "_\n" +
       "28\n" +
@@ -46,16 +62,26 @@ class GermanFormatTest {
       " 35\n" +
       " __\n" +
       "  4";
-    Calculator calculator = new Calculator();
-    Result result = calculator.divide(789, 5);
+    int dividend = 789;
+    int divisor = 5;
+    int reminder = 4;
+    ArrayList<Integer> minuend = new ArrayList<>();
+    minuend.add(7);
+    minuend.add(28);
+    minuend.add(39);
+    ArrayList<Integer> subtrahend = new ArrayList<>();
+    subtrahend.add(5);
+    subtrahend.add(25);
+    subtrahend.add(35);
+    Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
     Formatter spanishFormatterExample2 = FormatterFactory.creatrFormatter("German");
-    String expectedSpanishFormatExample2 = spanishFormatterExample2.format(result);
-    Assertions.assertEquals(expectedSpanishFormatExample2, actualGermanFormatExample2);
+    String expected = spanishFormatterExample2.format(input);
+    Assertions.assertEquals(expected, actual);
   }
 
   @Test
   void testGermanFormatExample3() {
-    String actualGermanFormatExample3 = "999 ÷5 => 199\n" +
+    String actual = "999 ÷5 => 199\n" +
       "5\n" +
       "_\n" +
       "49\n" +
@@ -65,28 +91,46 @@ class GermanFormatTest {
       " 45\n" +
       " __\n" +
       "  4";
-    Calculator calculator = new Calculator();
-    Result result = calculator.divide(999, 5);
+    int dividend = 999;
+    int divisor = 5;
+    int reminder = 4;
+    ArrayList<Integer> minuend = new ArrayList<>();
+    minuend.add(9);
+    minuend.add(49);
+    minuend.add(49);
+    ArrayList<Integer> subtrahend = new ArrayList<>();
+    subtrahend.add(5);
+    subtrahend.add(45);
+    subtrahend.add(45);
+    Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
     Formatter spanishFormatterExample3 = FormatterFactory.creatrFormatter("German");
-    String expectedSpanishFormatExample3 = spanishFormatterExample3.format(result);
-    Assertions.assertEquals(expectedSpanishFormatExample3, actualGermanFormatExample3);
+    String expected = spanishFormatterExample3.format(input);
+    Assertions.assertEquals(expected, actual);
   }
 
 
   @Test
   void testGermanFormatExample4() {
-    String actualGermanFormatExample4 = "500 ÷2 => 250\n" +
+    String actual = "500 ÷2 => 250\n" +
       "4\n" +
       "_\n" +
       "10\n" +
       "10\n" +
       "__\n" +
       "  0";
-    Calculator calculator = new Calculator();
-    Result result = calculator.divide(500, 2);
+    int dividend = 500;
+    int divisor = 2;
+    int reminder = 0;
+    ArrayList<Integer> minuend = new ArrayList<>();
+    minuend.add(5);
+    minuend.add(10);
+    ArrayList<Integer> subtrahend = new ArrayList<>();
+    subtrahend.add(4);
+    subtrahend.add(10);
+    Result input = new Result(dividend, divisor, reminder, minuend, subtrahend);
     Formatter spanishFormatterExample4 = FormatterFactory.creatrFormatter("German");
-    String expectedSpanishFormatExample4 = spanishFormatterExample4.format(result);
-    Assertions.assertEquals(expectedSpanishFormatExample4, actualGermanFormatExample4);
+    String expected = spanishFormatterExample4.format(input);
+    Assertions.assertEquals(expected, actual);
   }
 
   @Test

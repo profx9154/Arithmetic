@@ -12,9 +12,9 @@ class CalculatorTest {
 
   @Test
   void testDivideExpectationQuotient() {
-    int dividend=78945;
-    int divisor=4;
-    int reminder=1;
+    int dividend = 78945;
+    int divisor = 4;
+    int reminder = 1;
     ArrayList<Integer> minuend = new ArrayList<>();
     minuend.add(7);
     minuend.add(38);
@@ -27,7 +27,7 @@ class CalculatorTest {
     subtrahend.add(28);
     subtrahend.add(12);
     subtrahend.add(24);
-    Result expected = new Result(dividend,divisor,reminder,minuend,subtrahend);
+    Result expected = new Result(dividend, divisor, reminder, minuend, subtrahend);
     Result actual = calculator.divide(78945, 4);
     int actualQuotient = actual.getQuotient();
     Assertions.assertEquals(expected.getQuotient(), actualQuotient);
@@ -37,9 +37,9 @@ class CalculatorTest {
 
   @Test
   void testDivideExpectationReminder() {
-    int dividend=78945;
-    int divisor=4;
-    int reminder=1;
+    int dividend = 78945;
+    int divisor = 4;
+    int reminder = 1;
     ArrayList<Integer> minuend = new ArrayList<>();
     minuend.add(7);
     minuend.add(38);
@@ -52,7 +52,7 @@ class CalculatorTest {
     subtrahend.add(28);
     subtrahend.add(12);
     subtrahend.add(24);
-    Result expected = new Result(dividend,divisor,reminder,minuend,subtrahend);
+    Result expected = new Result(dividend, divisor, reminder, minuend, subtrahend);
     Result actual = calculator.divide(78945, 4);
     Assertions.assertEquals(expected.getReminder(), actual.getReminder());
 
@@ -61,9 +61,9 @@ class CalculatorTest {
 
   @Test
   void testDivideExpectationListSubtrahend() {
-    int dividend=78945;
-    int divisor=4;
-    int reminder=1;
+    int dividend = 78945;
+    int divisor = 4;
+    int reminder = 1;
     ArrayList<Integer> minuend = new ArrayList<>();
     minuend.add(7);
     minuend.add(38);
@@ -76,7 +76,7 @@ class CalculatorTest {
     subtrahend.add(28);
     subtrahend.add(12);
     subtrahend.add(24);
-    Result expected = new Result(dividend,divisor,reminder,minuend,subtrahend);
+    Result expected = new Result(dividend, divisor, reminder, minuend, subtrahend);
     Result actual = calculator.divide(78945, 4);
     Assertions.assertEquals(expected.getSubtrahend(), actual.getSubtrahend());
   }
@@ -84,9 +84,9 @@ class CalculatorTest {
 
   @Test
   void testDivideExpectationListMinuend() {
-    int dividend=78945;
-    int divisor=4;
-    int reminder=1;
+    int dividend = 78945;
+    int divisor = 4;
+    int reminder = 1;
     ArrayList<Integer> minuend = new ArrayList<>();
     minuend.add(7);
     minuend.add(38);
@@ -99,8 +99,8 @@ class CalculatorTest {
     subtrahend.add(28);
     subtrahend.add(12);
     subtrahend.add(24);
-    Result expected = new Result(dividend,divisor,reminder,minuend,subtrahend);
-    Result actual = calculator.divide(78945, 4);;
+    Result expected = new Result(dividend, divisor, reminder, minuend, subtrahend);
+    Result actual = calculator.divide(78945, 4); ;
     Assertions.assertEquals(expected.getMinuend(), actual.getMinuend());
   }
 
