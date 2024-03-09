@@ -8,7 +8,7 @@ import io.satonkin.foxminded.integerdivision.model.Result;
 public class Main {
   public static void main(String[] args) throws Exception {
     Calculator calculator = new Calculator();
-    Result result = calculator.divide(500, 2);
+    Result result = calculator.divide(78945, 4);
     Formatter spanishFormatter = FormatterFactory.creatrFormatter("Spanish");
     System.out.println(spanishFormatter.format(result));
     System.out.println(" ");
