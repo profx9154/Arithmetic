@@ -5,12 +5,11 @@ import io.satonkin.foxminded.integerdivision.formater.Formatter;
 import io.satonkin.foxminded.integerdivision.formater.FormatterFactory;
 import io.satonkin.foxminded.integerdivision.model.Result;
 
-import java.util.List;
 
 public class Main {
   public static void main(String[] args) throws Exception {
     Calculator calculator = new Calculator();
-    Result result = calculator.divide(78945, 4);
+    Result result = calculator.divide(78945, 45);
     Formatter spanishFormatter = FormatterFactory.creatrFormatter("Spanish");
     System.out.println(spanishFormatter.format(result));
     System.out.println(" ");
